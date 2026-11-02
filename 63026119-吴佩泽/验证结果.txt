@@ -1,0 +1,17 @@
+Lean 形式化证明验证结果
+姓名：吴佩泽
+学号：63026119
+命题：对任意正整数 n，存在素数 p > n。
+定理名称：欧几里得定理（素数无穷多）
+验证时间：2026年11月2日 14:36:58（北京时间）
+验证环境：live.lean-lang.org / MathlibDemo
+结果：整个文件处理完成；0 个错误，0 个警告。
+证明文件：Euclid.lean
+SHA-256：c81030d29cd758280421fc5774eb0ce26f78820541b4eaf278d49e6cd3d72000
+
+Lean 原始公理输出：
+'exists_prime_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'exists_prime_gt_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+公理依赖符合课程约定；无 sorryAx 或自定义公理。
+完整服务器返回记录见 Euclid.verification.json。

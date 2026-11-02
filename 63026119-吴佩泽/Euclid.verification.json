@@ -1,0 +1,4178 @@
+{
+  "checkedAt": "2026-11-02T06:36:58.242Z",
+  "endpoint": "wss://live.lean-lang.org/websocket/MathlibDemo",
+  "file": "Euclid.lean",
+  "sha256": "c81030d29cd758280421fc5774eb0ce26f78820541b4eaf278d49e6cd3d72000",
+  "success": true,
+  "reason": "File processing complete; both axiom commands completed without errors or sorryAx",
+  "diagnostics": [
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 19
+        },
+        "start": {
+          "character": 0,
+          "line": 19
+        }
+      },
+      "message": "'exists_prime_gt' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 19
+        },
+        "start": {
+          "character": 0,
+          "line": 19
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 26
+        },
+        "start": {
+          "character": 0,
+          "line": 26
+        }
+      },
+      "message": "'exists_prime_gt_pos' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 26
+        },
+        "start": {
+          "character": 0,
+          "line": 26
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    }
+  ],
+  "transcript": [
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "capabilities": {
+          "callHierarchyProvider": true,
+          "codeActionProvider": {
+            "codeActionKinds": [
+              "quickfix",
+              "refactor",
+              "source.organizeImports"
+            ],
+            "resolveProvider": true,
+            "workDoneProgress": false
+          },
+          "colorProvider": {
+            "workDoneProgress": false
+          },
+          "completionProvider": {
+            "resolveProvider": true,
+            "triggerCharacters": [
+              "."
+            ]
+          },
+          "declarationProvider": true,
+          "definitionProvider": true,
+          "documentHighlightProvider": true,
+          "documentSymbolProvider": true,
+          "experimental": {
+            "moduleHierarchyProvider": {},
+            "rpcProvider": {
+              "highlightMatchesProvider": {},
+              "rpcWireFormat": "v1"
+            }
+          },
+          "foldingRangeProvider": true,
+          "hoverProvider": true,
+          "inlayHintProvider": {
+            "resolveProvider": false,
+            "workDoneProgress": false
+          },
+          "referencesProvider": true,
+          "renameProvider": {
+            "prepareProvider": true
+          },
+          "semanticTokensProvider": {
+            "full": true,
+            "legend": {
+              "tokenModifiers": [
+                "declaration",
+                "definition",
+                "readonly",
+                "static",
+                "deprecated",
+                "abstract",
+                "async",
+                "modification",
+                "documentation",
+                "defaultLibrary"
+              ],
+              "tokenTypes": [
+                "keyword",
+                "variable",
+                "property",
+                "function",
+                "namespace",
+                "type",
+                "class",
+                "enum",
+                "interface",
+                "struct",
+                "typeParameter",
+                "parameter",
+                "enumMember",
+                "event",
+                "method",
+                "macro",
+                "modifier",
+                "comment",
+                "string",
+                "number",
+                "regexp",
+                "operator",
+                "decorator",
+                "leanSorryLike"
+              ]
+            },
+            "range": true
+          },
+          "signatureHelpProvider": {
+            "triggerCharacters": [
+              " "
+            ],
+            "workDoneProgress": false
+          },
+          "textDocumentSync": {
+            "change": 2,
+            "openClose": true,
+            "save": {
+              "includeText": true
+            },
+            "willSave": false,
+            "willSaveWaitUntil": false
+          },
+          "typeDefinitionProvider": true,
+          "workspaceSymbolProvider": true
+        },
+        "serverInfo": {
+          "name": "Lean 4 Server",
+          "version": "0.3.0"
+        }
+      }
+    },
+    {
+      "id": "register_lean_watcher",
+      "jsonrpc": "2.0",
+      "method": "client/registerCapability",
+      "params": {
+        "registrations": [
+          {
+            "id": "lean_watcher",
+            "method": "workspace/didChangeWatchedFiles",
+            "registerOptions": {
+              "watchers": [
+                {
+                  "globPattern": "**/*.lean"
+                },
+                {
+                  "globPattern": "**/*.ilean"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 0
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [],
+        "uri": "file:///MathlibDemo/Euclid.lean",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 0
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [],
+        "uri": "file:///MathlibDemo/Euclid.lean",
+        "version": 1
+      }
+    },
+    {
+      "id": 0,
+      "jsonrpc": "2.0",
+      "method": "workspace/inlayHint/refresh"
+    },
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "method": "workspace/inlayHint/refresh"
+    },
+    {
+      "id": 2,
+      "jsonrpc": "2.0",
+      "method": "workspace/inlayHint/refresh"
+    },
+    {
+      "id": 3,
+      "jsonrpc": "2.0",
+      "method": "workspace/semanticTokens/refresh"
+    },
+    {
+      "id": 4,
+      "jsonrpc": "2.0",
+      "method": "workspace/inlayHint/refresh"
+    },
+    {
+      "id": 5,
+      "jsonrpc": "2.0",
+      "method": "workspace/inlayHint/refresh"
+    },
+    {
+      "id": 6,
+      "jsonrpc": "2.0",
+      "method": "workspace/inlayHint/refresh"
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 7
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 9,
+                "line": 9
+              },
+              "start": {
+                "character": 2,
+                "line": 7
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 10
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 9,
+                "line": 9
+              },
+              "start": {
+                "character": 2,
+                "line": 7
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 10
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 9,
+                "line": 9
+              },
+              "start": {
+                "character": 2,
+                "line": 7
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 10
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 9,
+                "line": 9
+              },
+              "start": {
+                "character": 2,
+                "line": 7
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 10
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 9,
+                "line": 9
+              },
+              "start": {
+                "character": 2,
+                "line": 7
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 10
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 36,
+                "line": 8
+              },
+              "start": {
+                "character": 4,
+                "line": 8
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 9,
+                "line": 9
+              },
+              "start": {
+                "character": 4,
+                "line": 9
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 10
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 36,
+                "line": 8
+              },
+              "start": {
+                "character": 4,
+                "line": 8
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 9,
+                "line": 9
+              },
+              "start": {
+                "character": 4,
+                "line": 9
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 10
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 36,
+                "line": 8
+              },
+              "start": {
+                "character": 4,
+                "line": 8
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 9,
+                "line": 9
+              },
+              "start": {
+                "character": 4,
+                "line": 9
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 10
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 9,
+                "line": 9
+              },
+              "start": {
+                "character": 4,
+                "line": 9
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 10
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 9,
+                "line": 9
+              },
+              "start": {
+                "character": 4,
+                "line": 9
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 10
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 10
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 10
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 55,
+                "line": 10
+              },
+              "start": {
+                "character": 2,
+                "line": 10
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 11
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 11
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 20,
+                "line": 11
+              },
+              "start": {
+                "character": 2,
+                "line": 11
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 13
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 13
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 13,
+                "line": 13
+              },
+              "start": {
+                "character": 2,
+                "line": 13
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 14
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 13,
+                "line": 13
+              },
+              "start": {
+                "character": 2,
+                "line": 13
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 14
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 13,
+                "line": 13
+              },
+              "start": {
+                "character": 2,
+                "line": 13
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 14
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 13,
+                "line": 13
+              },
+              "start": {
+                "character": 2,
+                "line": 13
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 14
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 13,
+                "line": 13
+              },
+              "start": {
+                "character": 2,
+                "line": 13
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 14
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 13,
+                "line": 13
+              },
+              "start": {
+                "character": 2,
+                "line": 13
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 14
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 13,
+                "line": 13
+              },
+              "start": {
+                "character": 2,
+                "line": 13
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 14
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 14
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 30,
+                "line": 14
+              },
+              "start": {
+                "character": 2,
+                "line": 14
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 15
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 30,
+                "line": 14
+              },
+              "start": {
+                "character": 2,
+                "line": 14
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 15
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 30,
+                "line": 14
+              },
+              "start": {
+                "character": 25,
+                "line": 14
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 28,
+                "line": 17
+              },
+              "start": {
+                "character": 2,
+                "line": 15
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [],
+        "uri": "file:///MathlibDemo/Euclid.lean",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 29,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [
+          {
+            "fullRange": {
+              "end": {
+                "character": 6,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            },
+            "message": "'exists_prime_gt' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "range": {
+              "end": {
+                "character": 6,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            },
+            "severity": 3,
+            "source": "Lean 4"
+          }
+        ],
+        "uri": "file:///MathlibDemo/Euclid.lean",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 25,
+                "line": 24
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 25,
+                "line": 24
+              },
+              "start": {
+                "character": 2,
+                "line": 24
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 25,
+                "line": 24
+              },
+              "start": {
+                "character": 2,
+                "line": 24
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 25,
+                "line": 24
+              },
+              "start": {
+                "character": 2,
+                "line": 24
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 33,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 27
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 33,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 27
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 33,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 27
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 33,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 27
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 33,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 27
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 33,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 27
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 33,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 27
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 33,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 27
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [
+          {
+            "fullRange": {
+              "end": {
+                "character": 6,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            },
+            "message": "'exists_prime_gt' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "range": {
+              "end": {
+                "character": 6,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            },
+            "severity": 3,
+            "source": "Lean 4"
+          }
+        ],
+        "uri": "file:///MathlibDemo/Euclid.lean",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 33,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 27
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 27
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [
+          {
+            "fullRange": {
+              "end": {
+                "character": 6,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            },
+            "message": "'exists_prime_gt' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "range": {
+              "end": {
+                "character": 6,
+                "line": 19
+              },
+              "start": {
+                "character": 0,
+                "line": 19
+              }
+            },
+            "severity": 3,
+            "source": "Lean 4"
+          },
+          {
+            "fullRange": {
+              "end": {
+                "character": 6,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            },
+            "message": "'exists_prime_gt_pos' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "range": {
+              "end": {
+                "character": 6,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            },
+            "severity": 3,
+            "source": "Lean 4"
+          }
+        ],
+        "uri": "file:///MathlibDemo/Euclid.lean",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 27
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 27
+              },
+              "start": {
+                "character": 0,
+                "line": 27
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 22
+              },
+              "start": {
+                "character": 0,
+                "line": 22
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 4
+              },
+              "start": {
+                "character": 0,
+                "line": 4
+              }
+            }
+          },
+          {
+            "kind": 1,
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 26
+              },
+              "start": {
+                "character": 0,
+                "line": 26
+              }
+            }
+          }
+        ],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "$/lean/fileProgress",
+      "params": {
+        "processing": [],
+        "textDocument": {
+          "uri": "file:///MathlibDemo/Euclid.lean",
+          "version": 1
+        }
+      }
+    }
+  ]
+}
